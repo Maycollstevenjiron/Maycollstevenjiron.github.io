@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inicio de sesión</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      margin: 100px auto;
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <script>
+    function validarIngreso() {
+      // Obtener los valores de usuario y contraseña
+      var usuario = document.getElementById('usuario').value;
+      var contraseña = document.getElementById('contraseña').value;
+
+      // Validar los campos
+      if (usuario === "" || contraseña === "") {
+        alert("Por favor, complete todos los campos.");
+        return;
+      }
+
+      // Simular inicio de sesión
+      if (usuario === "admin" && contraseña === "123456") {
+        alert("Inicio de sesión exitoso. ¡Bienvenido/a!");
+        // Aquí puedes redirigir a otra página o realizar alguna otra acción después del inicio de sesión exitoso
+      } else {
+        alert("Usuario o contraseña incorrectos. Por favor, inténtelo nuevamente.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Iniciar sesión</h2>
+  
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" />
+
+    <label for="contraseña">Contraseña:</label>
+    <input type="password" id="contraseña" />
+
+    <button onclick="validarIngreso()">Iniciar sesión</button>
+  </div>
+</body>
+</html>
